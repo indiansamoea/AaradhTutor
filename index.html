@@ -1,79 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aaradh Tutors | Find Your Perfect Tutor</title>
+    <title>Aaradh Tutors | Premium Tutoring Service</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366F1',
+                        surface: '#0a0a0a',
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-        .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        body { background: #0a0a0a; color: white; scroll-behavior: smooth; }
-        .gradient-text { background: linear-gradient(135deg, #3b82f6, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        body { background-color: #0a0a0a; color: white; font-family: sans-serif; overflow-x: hidden; }
+        .glass { background: rgba(255,255,255,0.03); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.06); }
+        .text-gradient { background: linear-gradient(135deg, #6366F1 0%, #a855f7 50%, #ec4899 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card-hover { transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+        .card-hover:hover { transform: translateY(-10px); border-color: #6366F1; box-shadow: 0 20px 40px rgba(99, 102, 241, 0.2); }
+        .animate-fade-in { animation: fadeIn 1s ease-out forwards; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="fixed w-full z-50 glass py-4 px-8 flex justify-between items-center">
-        <h1 class="text-2xl font-bold gradient-text">AARADH TUTORS</h1>
-        <div class="hidden md:flex gap-6 text-sm font-semibold">
-            <a href="#how" class="hover:text-blue-400">How it Works</a>
-            <a href="#categories" class="hover:text-blue-400">Subjects</a>
-            <a href="#register" class="bg-blue-600 px-5 py-2 rounded-full hover:bg-blue-700 transition">Become a Tutor</a>
+    <nav class="fixed w-full z-50 glass py-5 px-8 flex justify-between items-center transition-all duration-300">
+        <h1 class="text-2xl font-bold tracking-tighter">AARADH<span class="text-primary">.</span>TUTORS</h1>
+        <div class="hidden md:flex gap-8 text-sm font-semibold text-gray-300">
+            <a href="#how" class="hover:text-primary transition">How it Works</a>
+            <a href="#categories" class="hover:text-primary transition">Subjects</a>
+            <a href="#register" class="bg-white/10 px-6 py-2 rounded-full hover:bg-white/20 transition">Join as Tutor</a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <header class="min-h-screen flex flex-col justify-center items-center pt-20 px-6 text-center">
-        <h2 class="text-6xl md:text-8xl font-black mb-6 leading-tight">Find the Perfect <br><span class="gradient-text">Tutor Near You</span></h2>
-        <p class="text-gray-400 text-lg max-w-2xl mb-10">Connecting students with trusted home tutors and online tutors in Patna. Smart learning starts here.</p>
-        <div class="flex gap-4">
-            <a href="#request" class="bg-blue-600 px-8 py-4 rounded-xl font-bold hover:scale-105 transition">Find a Tutor</a>
-            <a href="#register" class="glass px-8 py-4 rounded-xl font-bold hover:bg-white hover:text-black transition">Become a Tutor</a>
+        <div class="animate-fade-in">
+            <h2 class="text-7xl md:text-9xl font-black mb-6 leading-tight">Find Your <br><span class="text-gradient">Perfect Tutor</span></h2>
+            <p class="text-gray-400 text-xl max-w-2xl mb-12">Elite home and online tutoring. Patna's smartest students learn here.</p>
+            <div class="flex gap-4 justify-center">
+                <a href="#request" class="bg-primary px-10 py-4 rounded-xl font-bold text-lg hover:scale-105 transition shadow-lg shadow-primary/30">Find a Tutor</a>
+                <a href="#register" class="glass px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition">Become a Tutor</a>
+            </div>
         </div>
     </header>
 
-    <!-- Categories Section -->
     <section id="categories" class="py-20 px-8">
-        <h3 class="text-4xl font-bold text-center mb-16">Browse Subjects</h3>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
-            <!-- Cards repeat for Math, Science, etc -->
-            <div class="glass p-6 rounded-2xl text-center hover:border-blue-500 transition cursor-pointer">
-                <i class="fas fa-calculator text-3xl mb-4 text-blue-500"></i>
-                <p class="font-bold">Math Tutors</p>
+        <h3 class="text-5xl font-bold text-center mb-16 animate-fade-in">Subject Expertise</h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            <div class="glass p-8 rounded-3xl card-hover text-center">
+                <i class="fas fa-calculator text-4xl mb-6 text-primary"></i>
+                <p class="font-bold text-lg">Math</p>
             </div>
-            <div class="glass p-6 rounded-2xl text-center hover:border-blue-500 transition cursor-pointer">
-                <i class="fas fa-flask text-3xl mb-4 text-purple-500"></i>
-                <p class="font-bold">Science Tutors</p>
+            <div class="glass p-8 rounded-3xl card-hover text-center">
+                <i class="fas fa-microscope text-4xl mb-6 text-purple-500"></i>
+                <p class="font-bold text-lg">Science</p>
             </div>
-            <!-- Add more categories as needed -->
+            <div class="glass p-8 rounded-3xl card-hover text-center">
+                <i class="fas fa-book-open text-4xl mb-6 text-pink-500"></i>
+                <p class="font-bold text-lg">English</p>
+            </div>
+            <div class="glass p-8 rounded-3xl card-hover text-center">
+                <i class="fas fa-atom text-4xl mb-6 text-blue-400"></i>
+                <p class="font-bold text-lg">Physics</p>
+            </div>
         </div>
     </section>
 
-    <!-- Tutor Registration Form (Visual Placeholder) -->
-    <section id="register" class="py-20 px-8 glass max-w-3xl mx-auto rounded-3xl my-20">
-        <h3 class="text-3xl font-bold mb-8 text-center">Tutor Registration</h3>
-        <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <input type="text" placeholder="Full Name" class="bg-gray-900 p-4 rounded-xl border border-gray-700">
-            <input type="tel" placeholder="Phone Number" class="bg-gray-900 p-4 rounded-xl border border-gray-700">
-            <select class="bg-gray-900 p-4 rounded-xl border border-gray-700 text-gray-400">
-                <option>Subjects Taught</option>
-            </select>
-            <input type="number" placeholder="Hourly Fee (₹)" class="bg-gray-900 p-4 rounded-xl border border-gray-700">
-            <textarea placeholder="Short Bio" class="col-span-full bg-gray-900 p-4 rounded-xl border border-gray-700 h-32"></textarea>
-            <button class="col-span-full bg-blue-600 py-4 rounded-xl font-bold hover:bg-blue-700 transition">Submit Profile</button>
-        </form>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-12 px-8 border-t border-gray-800 text-center text-gray-500 text-sm">
-        <p>&copy; 2026 Aaradh Tutors. All Rights Reserved.</p>
-        <p class="mt-2">Patna, Bihar</p>
-    </footer>
-
-    <!-- WhatsApp Button -->
-    <a href="https://wa.me/917764812598" class="fixed bottom-8 right-8 bg-green-500 p-4 rounded-full text-white shadow-2xl hover:scale-110 transition z-50">
-        <i class="fab fa-whatsapp text-2xl"></i>
+    <!-- WhatsApp Floating Action -->
+    <a href="https://wa.me/917764812598" class="fixed bottom-8 right-8 bg-green-500 p-5 rounded-full text-white shadow-2xl hover:scale-110 transition z-50 animate-bounce">
+        <i class="fab fa-whatsapp text-3xl"></i>
     </a>
 </body>
 </html>
